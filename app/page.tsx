@@ -125,10 +125,22 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-pattern overflow-hidden">
+      <header className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-dark">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Automatisierungstechnik.webp"
+            alt="Automatisierungstechnik Background"
+            fill
+            className="object-cover opacity-40 mix-blend-overlay"
+            priority
+          />
+          <div className="absolute inset-0 bg-brand-dark/80"></div>
+        </div>
+
         {/* Abstract Background Elements */}
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-brand-primary opacity-20 blur-[100px] rounded-full mix-blend-screen"></div>
-        <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-brand-accent opacity-15 blur-[80px] rounded-full mix-blend-screen"></div>
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-brand-primary opacity-20 blur-[100px] rounded-full mix-blend-screen pointer-events-none"></div>
+        <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-brand-accent opacity-15 blur-[80px] rounded-full mix-blend-screen pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-stone-800/50 border border-stone-700 backdrop-blur-sm">
@@ -292,20 +304,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="mb-12 lg:mb-0 reveal">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-brand-dark aspect-video flex items-center justify-center group">
-                <Image
-                  src="/Automatisierungstechnik.webp"
-                  alt="Automatisierungstechnik - Engineering & Coding"
-                  fill
-                  className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
-                <div className="relative z-10 text-center p-8">
-                  <i className="fa-solid fa-code text-6xl text-white/90 mb-4 block drop-shadow-md"></i>
-                  <h3 className="text-2xl font-bold text-white drop-shadow-md">Engineering + Coding</h3>
-                  <p className="text-brand-primary mt-2 drop-shadow-md font-semibold">Die perfekte Symbiose</p>
-                </div>
-              </div>
+              {/* Image moved to Hero Section */}
               {/* Stats / Highlights */}
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center">
