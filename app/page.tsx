@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import FaqSection from "@/components/FaqSection";
+import ReferencesSection from "@/components/ReferencesSection";
 
 export default function Home() {
   useEffect(() => {
@@ -38,10 +40,11 @@ export default function Home() {
             src="/Automatisierungstechnik.webp"
             alt="Automatisierungstechnik Background"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-brand-dark/80"></div>
+          {/* Subtle overlay for contrast, maximizing image visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-black/20 to-brand-dark/80"></div>
         </div>
 
         {/* Abstract Background Elements */}
@@ -49,28 +52,28 @@ export default function Home() {
         <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-brand-accent opacity-15 blur-[80px] rounded-full mix-blend-screen pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-stone-800/50 border border-stone-700 backdrop-blur-sm">
+
+          <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-stone-900/60 border border-stone-600 backdrop-blur-sm shadow-lg">
             <span className="text-brand-primary font-semibold text-sm tracking-wider uppercase">
               Ingenieurbüro Michael Hermann
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6 reveal">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
             Industrielle PC-Software <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary bg-300% animate-gradient">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary bg-300% animate-gradient drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               & Automatisierungstechnik
             </span>
           </h1>
 
           <p
-            className="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10 reveal"
-            style={{ transitionDelay: "100ms" }}
+            className="mt-4 max-w-2xl mx-auto text-xl text-slate-100 mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium"
           >
             Spezialisiert auf komplexe Anwendungen mit physikalisch-technischem Hintergrund. Von der Laborautomatisierung
             bis zur Maschinensteuerung.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 reveal" style={{ transitionDelay: "200ms" }}>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#leistungen"
               className="px-8 py-4 bg-brand-primary text-white rounded-lg font-bold text-lg hover:bg-brand-secondary transition-all shadow-lg shadow-brand-primary/25 hover:shadow-neon transform hover:-translate-y-1"
@@ -79,7 +82,7 @@ export default function Home() {
             </a>
             <a
               href="#kontakt"
-              className="px-8 py-4 bg-stone-800 text-white border border-stone-700 rounded-lg font-bold text-lg hover:bg-stone-700 transition-all"
+              className="px-8 py-4 bg-stone-800 text-white border border-stone-700 rounded-lg font-bold text-lg hover:bg-stone-700 transition-all shadow-lg shadow-black/50"
             >
               Projekt anfragen
             </a>
@@ -333,6 +336,12 @@ export default function Home() {
           </div>
         </div>
       </section >
+
+      {/* FAQ Section */}
+      <FaqSection />
+
+      {/* References Section */}
+      <ReferencesSection />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12 text-slate-400 text-sm">

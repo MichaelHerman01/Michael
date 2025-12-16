@@ -55,7 +55,7 @@ export default function Navbar() {
                             <Link href={getLinkHref("#expertise")} className="text-slate-600 hover:text-brand-primary font-medium transition-colors">
                                 Expertise
                             </Link>
-                            <Link href={getLinkHref("#ueber-mich")} className="text-slate-600 hover:text-brand-primary font-medium transition-colors">
+                            <Link href="/ueber-mich" className="text-slate-600 hover:text-brand-primary font-medium transition-colors">
                                 Über Mich
                             </Link>
                             <Link
@@ -97,7 +97,7 @@ export default function Navbar() {
                         Expertise
                     </Link>
                     <Link
-                        href={getLinkHref("#ueber-mich")}
+                        href="/ueber-mich"
                         className="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-brand-primary"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
