@@ -7,7 +7,7 @@ const faqData = [
         question: "Was genau ist Ihre Kernkompetenz in der Automatisierung?",
         answer: (
             <>
-                Mein Fokus liegt auf der Entwicklung maßgeschneiderter <strong>Windows-Applikationen</strong>, die industrielle Prozesse steuern, visualisieren und protokollieren. Im Gegensatz zu Standardlösungen biete ich Software an, die auf einem tiefen Verständnis des Prozesses basiert, einfach und schnell erweiterbar ist und die einfach und sicher mit ihrer Umwelt kommuniziert. Dazu gehören:
+                Mein Fokus liegt auf der Entwicklung maßgeschneiderter <strong>Windows-Applikationen</strong>, die industrielle Prozesse steuern, visualisieren und protokollieren. Im Gegensatz zu Standardlösungen biete ich Software an, die tief in die Maschinensteuerung eingreift. Dazu gehören:
                 <ul className="mt-4 space-y-2 list-none">
                     <li className="flex items-start gap-3">
                         <span className="text-brand-primary mt-1">
@@ -22,7 +22,7 @@ const faqData = [
                             <i className="fa-solid fa-check"></i>
                         </span>
                         <span>
-                            <strong>Schnittstellen-Integration:</strong> Kommunikation mit SPS-Systemen (PLC) via OPC UA oder anderen Anwendungen über Standardprotokolle (z.B. gRPC).
+                            <strong>Schnittstellen-Integration:</strong> Kommunikation mit SPS-Systemen (PLC) via OPC UA oder anderen Anwendungen über gRPC.
                         </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -132,7 +132,7 @@ const faqData = [
                             <i className="fa-solid fa-screwdriver-wrench"></i>
                         </span>
                         <span>
-                            <strong>Hardware-Planung:</strong> Organisation des Erstellens der Stromlaufpläne sowie Begleitung von Montage und Verdrahtung.
+                            <strong>Hardware-Planung:</strong> Organisation der Stromlaufpläne sowie Begleitung von Montage und Verdrahtung.
                         </span>
                     </li>
                     <li className="flex items-start gap-3">
